@@ -1,0 +1,20 @@
+# AEO Checker
+
+> Free on page Answer Engine Optimization audit and Gemini visibility check.
+
+AEO Checker scores a public URL from 0 to 100 on whether ChatGPT, Gemini, Claude, and Perplexity can crawl, understand, and cite it. After the score, Gemini answers buyer questions so you can see whether the brand is mentioned.
+
+## Pages
+
+- [Free AEO Checker](/aeo-checker): Paste a URL, get a score, visibility table, and fix list.
+- [Home](/): How the checker works and FAQ.
+- [About](/about): Who publishes the tool.
+- [Contact](/contact): Book a free AEO consultation.
+- [Privacy](/privacy): What we log.
+- [Terms](/terms): Scope and acceptable use.
+
+## Notes
+
+- The on page audit is deterministic and does not call an AI model.
+- The visibility pass uses Gemini without Google Search grounding.
+- New sites often score 0% on mentions. That is expected.

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Northline AEO audit for B2B SaaS teams</title>
+    <meta
+      name="description"
+      content="Northline explains how to make B2B SaaS pages easy for ChatGPT, Gemini, and Perplexity to cite, with schema, llms.txt, and answer-ready copy."
+    />
+    <link rel="canonical" href="https://northline.example/aeo" />
+    <meta property="og:title" content="Northline AEO audit for B2B SaaS teams" />
+    <meta
+      property="og:description"
+      content="Make B2B SaaS pages easy for ChatGPT, Gemini, and Perplexity to cite."
+    />
+    <meta property="og:image" content="https://northline.example/og.png" />
+    <meta name="author" content="Northline editorial team" />
+    <meta property="article:published_time" content="2026-03-12" />
+    <meta property="article:modified_time" content="2026-11-01" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Northline",
+            "url": "https://northline.example",
+            "description": "AEO consultancy",
+            "sameAs": ["https://www.linkedin.com/company/northline", "https://en.wikipedia.org/wiki/Search_engine_optimization"],
+            "foundingDate": "2024"
+          },
+          {
+            "@type": "WebSite",
+            "name": "Northline",
+            "url": "https://northline.example",
+            "description": "Answer engine optimization",
+            "publisher": { "@type": "Organization", "name": "Northline" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is AEO?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Answer engine optimization is the work of making a site easy for AI assistants to crawl, quote, and cite."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <p class="author">By Northline editorial team</p>
+      <time datetime="2026-11-01">Updated 1 November 2026</time>
+      <nav>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+    <h1>Northline AEO audit for B2B SaaS teams</h1>
+    <h2>What is answer engine optimization?</h2>
+    <p>
+      Answer engine optimization is the practice of making a web page easy for ChatGPT, Gemini, Claude, and Perplexity to crawl, understand, and cite. It covers robots access, structured data, identity, and short answers that sit directly under question headings so a model can quote you without guessing. Teams use it when search traffic still arrives but brand mentions in AI answers do not.
+    </p>
+    <h2>How do you make a page easy to cite?</h2>
+    <p>
+      Start with a single H1, question-style H2s, and a 40 to 60 word answer in the first paragraph. Add FAQPage and Organization JSON-LD, allow GPTBot in robots.txt, and publish llms.txt with links to your docs. Cite sources such as
+      <a href="https://www.nist.gov/">NIST</a>
+      and
+      <a href="https://en.wikipedia.org/wiki/Large_language_model">Wikipedia</a>
+      when you quote a figure. Keep at least 300 words in the HTML itself.
+    </p>
+    <h3>Which signals matter most?</h3>
+    <ul>
+      <li>Crawler access in robots.txt</li>
+      <li>JSON-LD that names the organization</li>
+      <li>Visible dates and a byline</li>
+    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Signal</th>
+          <th>Why it matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>FAQPage</td>
+          <td>Lets models extract Q and A pairs</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Across 1,800 audited sites the median GEO score sits near 59 out of 100, and 76 percent ship JSON-LD. Pages under 300 words rarely get cited. Use schema.org types, keep copy in the server HTML, and link to an about page so the entity is unambiguous. That combination is what this fixture is built to demonstrate for the checker tests.
+    </p>
+    <p>
+      Extra copy keeps the word count above three hundred words so the content check can pass. Answer engines still prefer specific numbers, named authors, and outbound citations over slogans. If the HTML is an empty shell, none of the other work counts. Northline publishes this page as a complete example of the on-page bar, including lists, a table, dates, and a contact path.
+    </p>
+  </body>
+</html>

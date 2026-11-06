@@ -1,26 +1,213 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --surface: #181818;
+  --surface-2: #1f1f1f;
+  --surface-3: #272727;
+  --line: #313131;
+  --foreground: #f4efe6;
+  --muted: #b7b0a4;
+  --accent: #d08a4c;
+  --accent-text: #1a120c;
+  --pass: #c5d45b;
+  --fail: #e07a5f;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--line);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-pass: var(--pass);
+  --color-fail: var(--fail);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--background);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.heading-1 {
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.heading-2 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.heading-3 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.heading-4 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.heading-5 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.heading-6 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.title-1 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+.title-2 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+.title-3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+.title-4 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+.body-1 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-wrap: pretty;
+}
+.body-2 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+.body-3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+.body-4 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  text-wrap: pretty;
+}
+.body-5 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+.body-6 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+.button-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+.caption-2 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.caption-4 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+.caption-5 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+.hero-heading {
+  background: linear-gradient(90deg, #ffffff 0%, #9b9b9b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 640px) {
+  .heading-1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .heading-2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.reveal-word {
+  color: color-mix(in srgb, var(--foreground) 30%, transparent);
+  transition: color 500ms var(--ease);
+}
+.reveal-word.is-on {
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-word {
+    color: var(--foreground);
+    transition: none;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #111;
+  }
+  a[href]::after {
+    content: none !important;
+  }
 }

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      /* padding */
+    </script>
+    <script>
+      const payload = "x".repeat(8000);
+      window.__APP__ = payload;
+      document.getElementById("root").innerHTML = "<h1>Client only</h1><p>" + payload.slice(0, 20) + "</p>";
+    </script>
+  </body>
+</html>
